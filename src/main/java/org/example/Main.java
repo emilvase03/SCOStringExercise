@@ -3,7 +3,7 @@ package org.example;
 import java.util.Scanner;
 
 public class Main {
-    public static void exercise1() {
+    private static void exercise1() {
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Write something: ");
@@ -12,7 +12,7 @@ public class Main {
         System.out.println("You wrote: <" + input + ">");
     }
 
-    public static void exercise2() {
+    private static void exercise2() {
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Write something: ");
@@ -22,7 +22,7 @@ public class Main {
                 " and it has " + input.length() + " characters");
     }
 
-    public static void exercise3() {
+    private static void exercise3() {
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Write something: ");
@@ -40,19 +40,26 @@ public class Main {
         System.out.println(result.toString());
     }
 
-    public static void exercise4() {
+    private static void exercise4() {
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Write something: ");
         String input = scanner.nextLine();
 
         StringBuilder reversed = new StringBuilder();
-
-        for (int i = input.length() - 1; i >= 0; i--) {
-            reversed.append(input.charAt(i));
-        }
+        reversed.reverse();
 
         System.out.println("Reversed: " + reversed.toString());
+    }
+
+    private static void exercise5() {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Write something: ");
+        String input = scanner.nextLine();
+
+        String morse = MorseConverter.textToMorse(input);
+        System.out.println(morse);
     }
 
     public static void main(String[] args) {
@@ -60,5 +67,6 @@ public class Main {
         //exercise2();
         //exercise3();
         //exercise4();
+        //exercise5();
     }
 }
