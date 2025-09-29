@@ -62,11 +62,22 @@ public class Main {
         System.out.println(morse);
     }
 
+    private static void exercise6() {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Write something: ");
+        String input = scanner.nextLine();
+
+        String censored = WordCensor.censorWords(input);
+        System.out.println(censored);
+    }
+
     public static void main(String[] args) {
         //exercise1();
         //exercise2();
         //exercise3();
         //exercise4();
         //exercise5();
+        //exercise6();
     }
 }
